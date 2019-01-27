@@ -6,81 +6,6 @@
 	<title>Document</title>
 	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
 	<link rel="stylesheet" href="css/listview-grid.css">
-	<script src="js/jquery-2.1.0.min.js"></script>
-	<script src="js/jquery.mobile-1.4.5.min.js"></script>
-	<script src="js/ad.js"></script>
-	<script src="js/ad-panel-Special-topic.js"></script>
-	<script src="js/adq.js"></script>
-	<script src="js/panel_all.js"></script>
-  <!-- 專門處理cookie的js *須放在server才能使用-->
-  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
-	<script>
-    var mAccount ;
-    var mPassword ;
-
-	   $(function(){
-
-      if(Cookies.get('account')!=null&&Cookies.get('password')!=null){
-        mAccount = Cookies.get('account');
-        mPassword = Cookies.get('password');
-        checkCookie(mAccount,mPassword);
-      }
-
-      $(".login").on("click",check);//按下時,會進入check方法做確認
-      $(".logout").on("click",function(){
-        Cookies.remove('account');
-        Cookies.remove('password');
-        $(".panel_right").html("<div><h3>登入</h3><div data-role='fieldcontain'><label for='account'>帳號:</label><input type='text' name='account' id='account'></div><div data-role='fieldcontain'><label for='password'>密碼:</label><input type='password' name='password' id='password'></div><div class='ui-grid-a'><div class='ui-block-a'><a href='#' data-role='button' data-theme='b' class='login' id='login'>登入</a></div><div class='ui-block-b'><a href='#' data-role='button' data-theme='b' class='reg' id='reg'>註冊</a></div></div></div>");
-      });
-     });
-
-     //將帳號密碼的值傳入php做確認
-     function check(){ 
-      //確認帳號及密碼有無輸入值
-      if($("#account").val()==""||$("#password").val()==""){
-        alert("請輸入帳號或密碼!!");
-      }else{
-        checkLogin(1);
-         /*$.ajax({
-        type:"POST",
-        url:"",
-        data:{account:$("#account").val(),password:$("#password").val()},
-        success:checkLogin,//成功時,將php回傳的訊息做處理
-        error:function(){
-          alert("連線發生錯誤");
-        }
-      });*/
-      }
-     
-     }
-
-     //確認php回傳的訊息,並根據信息確認是否登入成功
-     function checkLogin(data){
-        switch(data){
-          case 0:
-            alert("無此帳號");
-            break;
-          case 1:
-            alert($("#account").val()+" 歡迎回來!!!");
-            //將成功登入的帳號及密碼給cookie儲存;
-            mAccount = $("#account").val();
-            mPassword = $("#password").val();
-            //Cookies.set('name', 'value', { expires: 7 });
-            Cookies.set('account', mAccount, { expires: 7 });//7天後cookie自動消除
-            Cookies.set('password', mPassword, { expires: 7 });
-
-            //成功登入後,更改右panel的内容
-            $(".panel_right").html("<div><h3>登出及設定</h3><div class='ui-grid-a'><div class='ui-block-a'><a href='#' data-role='button' data-theme='b' class='logout' id='logout'>登出</a></div><div class='ui-block-b'><a href='#' data-role='button' data-theme='b' class='setting' id='setting'>設定</a></div></div></div>");
-            break;  
-
-        }
-     }
-
-     function checkCookie(acc,pwd){
-        $(".panel_right").html("<div><h3>登出及設定</h3><div class='ui-grid-a'><div class='ui-block-a'><a href='#' data-role='button' data-theme='b' id='logout'>登出</a></div><div class='ui-block-b'><a href='#' data-role='button' data-theme='b' id='setting'>設定</a></div></div></div>");
-     }
-	</script>
-
 	<style>
 		.pimg_01{
 			border-radius: 200px;
@@ -167,12 +92,12 @@
             
            		<div data-role="fieldcontain">
            			<label for="account">帳號:</label>
-           			<input type="text" name="account" id="account">
+           			<input type="text" name="account" class="account" id="account">
            		</div>
 
    				<div data-role="fieldcontain">
    		 			<label for="password">密碼:</label>
-   		 			<input type="password" name="password" id="password">
+   		 			<input type="password" name="password" class="password" id="password">
    		 		</div> 
 
    		 	   <div class="ui-grid-a">
@@ -285,12 +210,12 @@
 	            
 	           		<div data-role="fieldcontain">
                 <label for="account">帳號:</label>
-                <input type="text" name="account" id="account">
+                <input type="text" name="account" class="account" id="account">
               </div>
 
 	   				<div data-role="fieldcontain">
 	   		 			<label for="password">密碼:</label>
-	   		 			<input type="password" name="password" id="password">
+	   		 			<input type="password" name="password" class="password" id="password">
 	   		 		</div> 
 
 	   		 	   <div class="ui-grid-a">
@@ -358,12 +283,12 @@
 	            
 	           		<div data-role="fieldcontain">
                 <label for="account">帳號:</label>
-                <input type="text" name="account" id="account">
+                <input type="text" name="account" class="account" id="account">
               </div>
 
 	   				<div data-role="fieldcontain">
 	   		 			<label for="password">密碼:</label>
-	   		 			<input type="password" name="password" id="password">
+	   		 			<input type="password" name="password" class="password" id="password">
 	   		 		</div> 
 
 	   		 	   <div class="ui-grid-a">
@@ -498,12 +423,12 @@
 	            
 	           		<div data-role="fieldcontain">
                 <label for="account">帳號:</label>
-                <input type="text" name="account" id="account">
+                <input type="text" name="account" class="account" id="account">
               </div>
 
 	   				<div data-role="fieldcontain">
 	   		 			<label for="password">密碼:</label>
-	   		 			<input type="password" name="password" id="password">
+	   		 			<input type="password" name="password" class="password" id="password">
 	   		 		</div> 
 
 	   		 	   <div class="ui-grid-a">
@@ -729,12 +654,12 @@
 	            
 	           		<div data-role="fieldcontain">
                 <label for="account">帳號:</label>
-                <input type="text" name="account" id="account">
+                <input type="text" name="account" class="account" id="account">
               </div>
 
 	   				<div data-role="fieldcontain">
 	   		 			<label for="password">密碼:</label>
-	   		 			<input type="password" name="password" id="password">
+	   		 			<input type="password" name="password" class="password" id="password">
 	   		 		</div> 
 
 	   		 	   <div class="ui-grid-a">
@@ -818,12 +743,12 @@
 	            
 	           		<div data-role="fieldcontain">
                 <label for="account">帳號:</label>
-                <input type="text" name="account" id="account">
+                <input type="text" name="account" class="account" id="account">
               </div>
 
 	   				<div data-role="fieldcontain">
 	   		 			<label for="password">密碼:</label>
-	   		 			<input type="password" name="password" id="password">
+	   		 			<input type="password" name="password" class="password" id="password">
 	   		 		</div> 
 
 	   		 	   <div class="ui-grid-a">
@@ -887,12 +812,12 @@
 	            
 	           		<div data-role="fieldcontain">
                 <label for="account">帳號:</label>
-                <input type="text" name="account" id="account">
+                <input type="text" name="account" class="account" id="account">
               </div>
 
 	   				<div data-role="fieldcontain">
 	   		 			<label for="password">密碼:</label>
-	   		 			<input type="password" name="password" id="password">
+	   		 			<input type="password" name="password" class="password" id="password">
 	   		 		</div> 
 
 	   		 	   <div class="ui-grid-a">
@@ -956,12 +881,12 @@
 	            
 	           		<div data-role="fieldcontain">
                 <label for="account">帳號:</label>
-                <input type="text" name="account" id="account">
+                <input type="text" name="account" class="account" id="account">
               </div>
 
 	   				<div data-role="fieldcontain">
 	   		 			<label for="password">密碼:</label>
-	   		 			<input type="password" name="password" id="password">
+	   		 			<input type="password" name="password" class="password" id="password">
 	   		 		</div> 
 
 	   		 	   <div class="ui-grid-a">
@@ -1029,12 +954,12 @@
 	            
 	           		<div data-role="fieldcontain">
                 <label for="account">帳號:</label>
-                <input type="text" name="account" id="account">
+                <input type="text" name="account" class="account" id="account">
               </div>
 
 	   				<div data-role="fieldcontain">
 	   		 			<label for="password">密碼:</label>
-	   		 			<input type="password" name="password" id="password">
+	   		 			<input type="password" name="password" class="password" id="password">
 	   		 		</div> 
 
 	   		 	   <div class="ui-grid-a">
@@ -1078,6 +1003,88 @@
 	
 		</div>
 	</div>
+
+
+	<script src="js/jquery-2.1.0.min.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script src="js/ad.js"></script>
+	<script src="js/ad-panel-Special-topic.js"></script>
+	<script src="js/adq.js"></script>
+	<script src="js/panel_all.js"></script>
+  <!-- 專門處理cookie的js *須放在server才能使用-->
+ 	<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+  <!-- 專門處理swipe的js -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
+	
+	<script>
+    var mAccount ;
+    var mPassword ;
+
+	$(function(){
+
+      if(Cookies.get('account')!=null&&Cookies.get('password')!=null){
+        mAccount = Cookies.get('account');
+        mPassword = Cookies.get('password');
+        checkCookie(mAccount,mPassword);
+      }
+
+      $(".login").on("click",check);//按下時,會進入check方法做確認
+      $(".logout").on("click",function(){
+        Cookies.remove('account');
+        Cookies.remove('password');
+        $(".panel_right").html("<div><h3>登入</h3><div data-role='fieldcontain'><label for='account'>帳號:</label><input type='text' name='account' id='account'></div><div data-role='fieldcontain'><label for='password'>密碼:</label><input type='password' name='password' id='password'></div><div class='ui-grid-a'><div class='ui-block-a'><a href='#' data-role='button' data-theme='b' class='login' id='login'>登入</a></div><div class='ui-block-b'><a href='#' data-role='button' data-theme='b' class='reg' id='reg'>註冊</a></div></div></div>");
+      });
+     });
+
+     //將帳號密碼的值傳入php做確認
+     function check(){ 
+      //確認帳號及密碼有無輸入值
+      if($(".account").val()==""||$(".password").val()==""){
+        alert("請輸入帳號或密碼!!");
+      }else{
+        checkLogin(1);
+         /*$.ajax({
+        type:"POST",
+        url:"",
+        data:{account:$(".account").val(),password:$(".password").val()},
+        success:checkLogin,//成功時,將php回傳的訊息做處理
+        error:function(){
+          alert("連線發生錯誤");
+        }
+      });*/
+      }
+     
+     }
+
+     //確認php回傳的訊息,並根據信息確認是否登入成功
+     function checkLogin(data){
+        switch(data){
+          case 0:
+            alert("帳號密碼輸入有誤");
+            break;
+          case 1:
+            alert($(".account").val()+" 歡迎回來!!!");
+            //將成功登入的帳號及密碼給cookie儲存;
+            mAccount = $(".account").val();
+            mPassword = $(".password").val();
+            //Cookies.set('name', 'value', { expires: 7 });
+            Cookies.set('account', mAccount, { expires: 7 });//7天後cookie自動消除
+            Cookies.set('password', mPassword, { expires: 7 });
+
+            //成功登入後,更改右panel的内容
+            $(".panel_right").html("<div><h3>登出及設定</h3><div class='ui-grid-a'><div class='ui-block-a'><a href='#' data-role='button' data-theme='b' class='logout' id='logout'>登出</a></div><div class='ui-block-b'><a href='#' data-role='button' data-theme='b' class='setting' id='setting'>設定</a></div></div></div>").trigger('create');
+            break;  
+
+        }
+     }
+
+     function checkCookie(acc,pwd){
+        $(".panel_right").html("<div><h3>登出及設定</h3><div class='ui-grid-a'><div class='ui-block-a'><a href='#' data-role='button' data-theme='b' class='logout' id='logout'>登出</a></div><div class='ui-block-b'><a href='#' data-role='button' data-theme='b' id='setting'>設定</a></div></div></div>");
+     }
+	</script>
 
 </body>
 </html>
