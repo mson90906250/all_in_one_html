@@ -6,7 +6,7 @@
         // We do this by checking the data that the framework stores on the page element (panel: open).
         if ( $( ".ui-page-active" ).jqmData( "panel" ) !== "open" ) {
           if ( e.type === "swipeleft" ) {
-            $( "#home-panelr" ).panel( "open" );
+            $( "#panelr01" ).panel( "open" );
           }else if ( e.type === "swiperight" ) {
             $( "#home-panell" ).panel( "open" );
           }
@@ -22,7 +22,7 @@
         // We do this by checking the data that the framework stores on the page element (panel: open).
         if ( $( ".ui-page-active" ).jqmData( "panel" ) !== "open" ) {
           if ( e.type === "swipeleft" ) {
-            $( "#about-panelr" ).panel( "open" );
+            $( "#panelr02" ).panel( "open" );
           }else if ( e.type === "swiperight" ) {
             $( "#about-panell" ).panel( "open" );
           }
@@ -38,7 +38,7 @@
         // We do this by checking the data that the framework stores on the page element (panel: open).
         if ( $( ".ui-page-active" ).jqmData( "panel" ) !== "open" ) {
           if ( e.type === "swipeleft" ) {
-            $( "#event-panelr" ).panel( "open" );
+            $( "#panelr03" ).panel( "open" );
           }else if ( e.type === "swiperight" ) {
             $( "#event-panell" ).panel( "open" );
           }
@@ -54,7 +54,7 @@
         // We do this by checking the data that the framework stores on the page element (panel: open).
         if ( $( ".ui-page-active" ).jqmData( "panel" ) !== "open" ) {
           if ( e.type === "swipeleft" ) {
-            $( "#shop01-panelr" ).panel( "open" );
+            $( "#panelr04" ).panel( "open" );
           }else if ( e.type === "swiperight" ) {
             $( "#shop01-panell" ).panel( "open" );
           }
@@ -70,7 +70,7 @@
         // We do this by checking the data that the framework stores on the page element (panel: open).
         if ( $( ".ui-page-active" ).jqmData( "panel" ) !== "open" ) {
           if ( e.type === "swipeleft" ) {
-            $( "#favorite-panelr" ).panel( "open" );
+            $( "#panelr05" ).panel( "open" );
           }else if ( e.type === "swiperight" ) {
             $( "#favorite-panell" ).panel( "open" );
           }
@@ -86,7 +86,7 @@
         // We do this by checking the data that the framework stores on the page element (panel: open).
         if ( $( ".ui-page-active" ).jqmData( "panel" ) !== "open" ) {
           if ( e.type === "swipeleft" ) {
-            $( "#more-panelr" ).panel( "open" );
+            $( "#panelr06" ).panel( "open" );
           }else if ( e.type === "swiperight" ) {
             $( "#more-panell" ).panel( "open" );
           }
@@ -102,7 +102,7 @@
         // We do this by checking the data that the framework stores on the page element (panel: open).
         if ( $( ".ui-page-active" ).jqmData( "panel" ) !== "open" ) {
           if ( e.type === "swipeleft" ) {
-            $( "#bus-panelr" ).panel( "open" );
+            $( "#panelr07" ).panel( "open" );
           }else if ( e.type === "swiperight" ) {
             $( "#bus-panell" ).panel( "open" );
           }
@@ -118,7 +118,7 @@
         // We do this by checking the data that the framework stores on the page element (panel: open).
         if ( $( ".ui-page-active" ).jqmData( "panel" ) !== "open" ) {
           if ( e.type === "swipeleft" ) {
-            $( "#ubike-panelr" ).panel( "open" );
+            $( "#panelr08" ).panel( "open" );
           }else if ( e.type === "swiperight" ) {
             $( "#ubike-panell" ).panel( "open" );
           }
@@ -134,7 +134,7 @@
         // We do this by checking the data that the framework stores on the page element (panel: open).
         if ( $( ".ui-page-active" ).jqmData( "panel" ) !== "open" ) {
           if ( e.type === "swipeleft" ) {
-            $( "#about_us-panelr" ).panel( "open" );
+            $( "#panelr09" ).panel( "open" );
           }else if ( e.type === "swiperight" ) {
             $( "#about_us-panell" ).panel( "open" );
           }
