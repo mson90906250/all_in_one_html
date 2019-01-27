@@ -6,6 +6,9 @@
 	<title>Document</title>
 	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
 	<link rel="stylesheet" href="css/listview-grid.css">
+	<!-- 專門處理swipe的js -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css">
 	<style>
 		.pimg_01{
 			border-radius: 200px;
@@ -86,26 +89,26 @@
               </ul> 
             </div>
 
-        <div data-role="panel" class="panel_right" id="home-panelr" data-position="right" data-theme="b" data-dispaly="overlay">
+        <div data-role="panel"  id="panelr01" data-position="right" data-theme="b" data-dispaly="overlay">
           <div >
           	 <h3>登入</h3>
             
            		<div data-role="fieldcontain">
            			<label for="account">帳號:</label>
-           			<input type="text" name="account" class="account" id="account01">
+           			<input type="text" name="account"  id="account01">
            		</div>
 
    				<div data-role="fieldcontain">
    		 			<label for="password">密碼:</label>
-   		 			<input type="password" name="password" class="password" id="password01">
+   		 			<input type="password" name="password"  id="password01">
    		 		</div> 
 
    		 	   <div class="ui-grid-a">
        	    	<div class="ui-block-a">
-       	    	     <a href="#" data-role="button" data-theme="b" class="login" id="login">登入</a>
+       	    	     <a href="#" data-role="button" data-theme="b"  id="login">登入</a>
        	    	</div>
        	    	<div class="ui-block-b">
-       	    	     <a href="#" data-role="button" data-theme="b" class="reg" id="reg">註冊</a>
+       	    	     <a href="#" data-role="button" data-theme="b"  id="reg">註冊</a>
        	    	</div>
        	    	
        	     </div>
@@ -114,7 +117,7 @@
 
 		<div data-role="header" data-theme="b" data-position="fixed">
         	<a href="#home-panell" data-role="button" data-theme="b" data-icon="bars" data-iconpos="notext">LeftPanel</a>
-			<a href="#home-panelr" data-role="button" data-theme="b" data-icon="arrow-l" data-iconpos="notext" >RightPanel</a>
+			<a href="#panelr01" data-role="button" data-theme="b" data-icon="arrow-l" data-iconpos="notext" >RightPanel</a>
 			<h1>愛文創審計新村</h1>
 		</div>
 		<div data-role="main" data-theme="b" data-role="content">
@@ -204,26 +207,26 @@
               </ul> 
 		</div>
         
-         <div data-role="panel" class="panel_right" id="about-panelr" data-position="right" data-theme="b" data-dispaly="overlay">
+         <div data-role="panel"  id="panelr02" data-position="right" data-theme="b" data-dispaly="overlay">
 	          <div >
 	          	 <h3>登入</h3>
 	            
 	           		<div data-role="fieldcontain">
                 <label for="account">帳號:</label>
-                <input type="text" name="account" class="account" id="account02">
+                <input type="text" name="account"  id="account02">
               </div>
 
 	   				<div data-role="fieldcontain">
 	   		 			<label for="password">密碼:</label>
-	   		 			<input type="password" name="password" class="password" id="password02">
+	   		 			<input type="password" name="password"  id="password02">
 	   		 		</div> 
 
 	   		 	   <div class="ui-grid-a">
 	       	    	<div class="ui-block-a">
-	       	    	     <a href="#" data-role="button" data-theme="b" class="login" id="login">登入</a>
+	       	    	     <a href="#" data-role="button" data-theme="b"  id="login">登入</a>
 	       	    	</div>
 	       	    	<div class="ui-block-b">
-	       	    	     <a href="#" data-role="button" data-theme="b" class="reg" id="reg">註冊</a>
+	       	    	     <a href="#" data-role="button" data-theme="b"  id="reg">註冊</a>
 	       	    	</div>
 	       	    	
 	       	     </div>
@@ -232,7 +235,7 @@
 
 		<div data-role="header"  data-position="fixed">
 			<a href="#about-panell" data-role="button" data-theme="b" data-icon="bars" data-iconpos="notext" >LeftPanel</a>
-			<a href="#about-panelr" data-role="button" data-theme="b" data-icon="arrow-l" data-iconpos="notext" >Panel</a>
+			<a href="#panelr02" data-role="button" data-theme="b" data-icon="arrow-l" data-iconpos="notext" >Panel</a>
 			<h1>關於審計</h1>
 			</div>
         <div data-role="main" class="ui-content">
@@ -277,26 +280,26 @@
               </ul> 
 		</div>
         
-         <div data-role="panel" class="panel_right" id="event-panelr" data-position="right" data-theme="b" data-dispaly="overlay">
+         <div data-role="panel"  id="panelr03" data-position="right" data-theme="b" data-dispaly="overlay">
 	          <div >
 	          	 <h3>登入</h3>
 	            
 	           		<div data-role="fieldcontain">
                 <label for="account">帳號:</label>
-                <input type="text" name="account" class="account" id="account03">
+                <input type="text" name="account"  id="account03">
               </div>
 
 	   				<div data-role="fieldcontain">
 	   		 			<label for="password">密碼:</label>
-	   		 			<input type="password" name="password" class="password" id="password03">
+	   		 			<input type="password" name="password"  id="password03">
 	   		 		</div> 
 
 	   		 	   <div class="ui-grid-a">
 	       	    	<div class="ui-block-a">
-	       	    	     <a href="#" data-role="button" data-theme="b" class="login" id="login">登入</a>
+	       	    	     <a href="#" data-role="button" data-theme="b"  id="login">登入</a>
 	       	    	</div>
 	       	    	<div class="ui-block-b">
-	       	    	     <a href="#" data-role="button" data-theme="b" class="reg" id="reg">註冊</a>
+	       	    	     <a href="#" data-role="button" data-theme="b"  id="reg">註冊</a>
 	       	    	</div>
 	       	    	
 	       	     </div>
@@ -306,7 +309,7 @@
 
 		<div data-role="header" data-theme="b">
 			<a href="#event-panell" data-role="button" data-theme="b" data-icon="bars" data-iconpos="notext" >LeftPanel</a>
-			<a href="#event-panelr" data-role="button" data-theme="b" data-icon="arrow-l" data-iconpos="notext" >Panel</a>
+			<a href="#panelr03" data-role="button" data-theme="b" data-icon="arrow-l" data-iconpos="notext" >Panel</a>
 			<h1>近期活動</h1>
 			
 		</div>		
@@ -417,26 +420,26 @@
               </ul> 
 		</div>
         
-         <div data-role="panel" class="panel_right" id="shop01-panelr" data-position="right" data-theme="b" data-dispaly="overlay">
+         <div data-role="panel"  id="panelr04" data-position="right" data-theme="b" data-dispaly="overlay">
 	          <div >
 	          	 <h3>登入</h3>
 	            
 	           		<div data-role="fieldcontain">
                 <label for="account">帳號:</label>
-                <input type="text" name="account" class="account" id="account04">
+                <input type="text" name="account"  id="account04">
               </div>
 
 	   				<div data-role="fieldcontain">
 	   		 			<label for="password">密碼:</label>
-	   		 			<input type="password" name="password" class="password" id="password04">
+	   		 			<input type="password" name="password"  id="password04">
 	   		 		</div> 
 
 	   		 	   <div class="ui-grid-a">
 	       	    	<div class="ui-block-a">
-	       	    	     <a href="#" data-role="button" data-theme="b" class="login" id="login">登入</a>
+	       	    	     <a href="#" data-role="button" data-theme="b"  id="login">登入</a>
 	       	    	</div>
 	       	    	<div class="ui-block-b">
-	       	    	     <a href="#" data-role="button" data-theme="b" class="reg" id="reg">註冊</a>
+	       	    	     <a href="#" data-role="button" data-theme="b"  id="reg">註冊</a>
 	       	    	</div>
 	       	    	
 	       	     </div>
@@ -446,7 +449,7 @@
 
 		<div data-role="header" data-theme="b">
         	<a href="#shop01-panell" data-role="button" data-theme="b" data-icon="bars" data-iconpos="notext" >LeftPanel</a>
-			<a href="#shop01-panelr" data-role="button" data-theme="b" data-icon="arrow-l" data-iconpos="notext" >Panel</a>	
+			<a href="#panelr04" data-role="button" data-theme="b" data-icon="arrow-l" data-iconpos="notext" >Panel</a>	
 
 			<h2>店家介紹</h2>
 		</div>
@@ -648,26 +651,26 @@
               </ul> 
 		</div>
         
-         <div data-role="panel" class="panel_right" id="favorite-panelr" data-position="right" data-theme="b" data-dispaly="overlay">
+         <div data-role="panel"  id="panelr05" data-position="right" data-theme="b" data-dispaly="overlay">
 	          <div >
 	          	 <h3>登入</h3>
 	            
 	           		<div data-role="fieldcontain">
                 <label for="account">帳號:</label>
-                <input type="text" name="account" class="account" id="account05">
+                <input type="text" name="account"  id="account05">
               </div>
 
 	   				<div data-role="fieldcontain">
 	   		 			<label for="password">密碼:</label>
-	   		 			<input type="password" name="password" class="password" id="password05">
+	   		 			<input type="password" name="password"  id="password05">
 	   		 		</div> 
 
 	   		 	   <div class="ui-grid-a">
 	       	    	<div class="ui-block-a">
-	       	    	     <a href="#" data-role="button" data-theme="b" class="login" id="login">登入</a>
+	       	    	     <a href="#" data-role="button" data-theme="b"  id="login">登入</a>
 	       	    	</div>
 	       	    	<div class="ui-block-b">
-	       	    	     <a href="#" data-role="button" data-theme="b" class="reg" id="reg">註冊</a>
+	       	    	     <a href="#" data-role="button" data-theme="b"  id="reg">註冊</a>
 	       	    	</div>
 	       	    	
 	       	     </div>
@@ -676,7 +679,7 @@
 
 		<div data-role="header" data-theme="b" data-position="fixed">
 			<a href="#favorite-panell" data-role="button" data-theme="b" data-icon="bars" data-iconpos="notext" >LeftPanel</a>
-			<a href="#favorite-panelr" data-role="button" data-theme="b" data-icon="arrow-l" data-iconpos="notext" >Panel</a>	
+			<a href="#panelr05" data-role="button" data-theme="b" data-icon="arrow-l" data-iconpos="notext" >Panel</a>	
 			<h1>我的最愛</h1>
 		</div>
 
@@ -737,26 +740,26 @@
               </ul> 
 		</div>
         
-         <div data-role="panel" class="panel_right" id="more-panelr" data-position="right" data-theme="b" data-dispaly="overlay">
+         <div data-role="panel"  id="panelr06" data-position="right" data-theme="b" data-dispaly="overlay">
 	          <div >
 	          	 <h3>登入</h3>
 	            
 	           		<div data-role="fieldcontain">
                 <label for="account">帳號:</label>
-                <input type="text" name="account" class="account" id="account06">
+                <input type="text" name="account"  id="account06">
               </div>
 
 	   				<div data-role="fieldcontain">
 	   		 			<label for="password">密碼:</label>
-	   		 			<input type="password" name="password" class="password" id="password06">
+	   		 			<input type="password" name="password"  id="password06">
 	   		 		</div> 
 
 	   		 	   <div class="ui-grid-a">
 	       	    	<div class="ui-block-a">
-	       	    	     <a href="#" data-role="button" data-theme="b" class="login" id="login">登入</a>
+	       	    	     <a href="#" data-role="button" data-theme="b"  id="login">登入</a>
 	       	    	</div>
 	       	    	<div class="ui-block-b">
-	       	    	     <a href="#" data-role="button" data-theme="b" class="reg" id="reg">註冊</a>
+	       	    	     <a href="#" data-role="button" data-theme="b"  id="reg">註冊</a>
 	       	    	</div>
 	       	    	
 	       	     </div>
@@ -766,7 +769,7 @@
 			
 		<div data-role="header" data-position="fixed" data-theme="b">
 			<a href="#more-panell" data-role="button" data-theme="a"  data-icon="bars" data-iconpos="notext" id="homeprev" >Back</a>
-			<a href="#more-panelr" data-role="button" data-theme="a" data-icon="arrow-l" class="ui-btn-right" data-iconpos="notext" id="homenext">Next</a>	
+			<a href="#panelr06" data-role="button" data-theme="a" data-icon="arrow-l" class="ui-btn-right" data-iconpos="notext" id="homenext">Next</a>	
 		<h1>探索更多</h1>
 		
 		</div>
@@ -806,26 +809,26 @@
               </ul> 
 		</div>
         
-         <div data-role="panel" class="panel_right" id="bus-panelr" data-position="right" data-theme="b" data-dispaly="overlay">
+         <div data-role="panel"  id="panelr07" data-position="right" data-theme="b" data-dispaly="overlay">
 	          <div >
 	          	 <h3>登入</h3>
 	            
 	           		<div data-role="fieldcontain">
                 <label for="account">帳號:</label>
-                <input type="text" name="account" class="account" id="account07">
+                <input type="text" name="account"  id="account07">
               </div>
 
 	   				<div data-role="fieldcontain">
 	   		 			<label for="password">密碼:</label>
-	   		 			<input type="password" name="password" class="password" id="password07">
+	   		 			<input type="password" name="password"  id="password07">
 	   		 		</div> 
 
 	   		 	   <div class="ui-grid-a">
 	       	    	<div class="ui-block-a">
-	       	    	     <a href="#" data-role="button" data-theme="b" class="login" id="login">登入</a>
+	       	    	     <a href="#" data-role="button" data-theme="b"  id="login">登入</a>
 	       	    	</div>
 	       	    	<div class="ui-block-b">
-	       	    	     <a href="#" data-role="button" data-theme="b" class="reg" id="reg">註冊</a>
+	       	    	     <a href="#" data-role="button" data-theme="b"  id="reg">註冊</a>
 	       	    	</div>
 	       	    	
 	       	     </div>
@@ -833,7 +836,7 @@
 	       </div>
 		<div data-role="header" data-position="fixed" data-theme="b">
 			<a href="#bus-panell" data-role="button" data-theme="a"  data-icon="bars" data-iconpos="notext" id="homeprev" >Back</a>
-			<a href="#bus-panelr" data-role="button" data-theme="a" data-icon="arrow-l" class="ui-btn-right" data-iconpos="notext" id="homenext">Next</a>	
+			<a href="#panelr07" data-role="button" data-theme="a" data-icon="arrow-l" class="ui-btn-right" data-iconpos="notext" id="homenext">Next</a>	
 			<h1>公車資訊</h1>
 		</div>
 		<!-- leftpanel -->
@@ -875,26 +878,26 @@
               </ul> 
 		</div>
         
-         <div data-role="panel" class="panel_right" id="ubike-panelr" data-position="right" data-theme="b" data-dispaly="overlay">
+         <div data-role="panel"  id="panelr08" data-position="right" data-theme="b" data-dispaly="overlay">
 	          <div >
 	          	 <h3>登入</h3>
 	            
 	           		<div data-role="fieldcontain">
                 <label for="account">帳號:</label>
-                <input type="text" name="account" class="account" id="account08">
+                <input type="text" name="account"  id="account08">
               </div>
 
 	   				<div data-role="fieldcontain">
 	   		 			<label for="password">密碼:</label>
-	   		 			<input type="password" name="password" class="password" id="password08">
+	   		 			<input type="password" name="password"  id="password08">
 	   		 		</div> 
 
 	   		 	   <div class="ui-grid-a">
 	       	    	<div class="ui-block-a">
-	       	    	     <a href="#" data-role="button" data-theme="b" class="login" id="login">登入</a>
+	       	    	     <a href="#" data-role="button" data-theme="b"  id="login">登入</a>
 	       	    	</div>
 	       	    	<div class="ui-block-b">
-	       	    	     <a href="#" data-role="button" data-theme="b" class="reg" id="reg">註冊</a>
+	       	    	     <a href="#" data-role="button" data-theme="b"  id="reg">註冊</a>
 	       	    	</div>
 	       	    	
 	       	     </div>
@@ -902,7 +905,7 @@
 	       </div>
 		<div data-role="header" data-position="fixed" data-theme="b">
 			<a href="#ubike-panell" data-role="button" data-theme="a"  data-icon="bars" data-iconpos="notext" id="homeprev" >Back</a>
-			<a href="#ubike-panelr" data-role="button" data-theme="a" data-icon="arrow-l" class="ui-btn-right" data-iconpos="notext" id="homenext">Next</a>		
+			<a href="#panelr08" data-role="button" data-theme="a" data-icon="arrow-l" class="ui-btn-right" data-iconpos="notext" id="homenext">Next</a>		
 			<h1>附近ubike</h1>
 		
 		</div>
@@ -948,26 +951,26 @@
               </ul> 
 		</div>
         
-         <div data-role="panel" class="panel_right" id="about_us-panelr" data-position="right" data-theme="b" data-dispaly="overlay">
+         <div data-role="panel"  id="panelr09" data-position="right" data-theme="b" data-dispaly="overlay">
 	          <div >
 	          	 <h3>登入</h3>
 	            
 	           		<div data-role="fieldcontain">
                 <label for="account">帳號:</label>
-                <input type="text" name="account" class="account" id="account09">
+                <input type="text" name="account"  id="account09">
               </div>
 
 	   				<div data-role="fieldcontain">
 	   		 			<label for="password">密碼:</label>
-	   		 			<input type="password" name="password" class="password" id="password09">
+	   		 			<input type="password" name="password"  id="password09">
 	   		 		</div> 
 
 	   		 	   <div class="ui-grid-a">
 	       	    	<div class="ui-block-a">
-	       	    	     <a href="#" data-role="button" data-theme="b" class="login" id="login">登入</a>
+	       	    	     <a href="#" data-role="button" data-theme="b"  id="login">登入</a>
 	       	    	</div>
 	       	    	<div class="ui-block-b">
-	       	    	     <a href="#" data-role="button" data-theme="b" class="reg" id="reg">註冊</a>
+	       	    	     <a href="#" data-role="button" data-theme="b"  id="reg">註冊</a>
 	       	    	</div>
 	       	    	
 	       	     </div>
@@ -975,7 +978,7 @@
 	       </div>
 		<div data-role="header"  data-position="fixed">
 			<a href="#about_us-panell" data-role="button" data-theme="a"  data-icon="bars" data-iconpos="notext" id="homeprev" >Back</a>
-			<a href="#about_us-panelr" data-role="button" data-theme="a" data-icon="arrow-l" class="ui-btn-right" data-iconpos="notext" id="homenext">Next</a>		
+			<a href="#panelr09" data-role="button" data-theme="a" data-icon="arrow-l" class="ui-btn-right" data-iconpos="notext" id="homenext">Next</a>		
 			<h1>關於我們</h1>
 			
 		</div>
@@ -1014,8 +1017,6 @@
   <!-- 專門處理cookie的js *須放在server才能使用-->
  	<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
   <!-- 專門處理swipe的js -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
 	
